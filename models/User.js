@@ -1,3 +1,6 @@
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
@@ -29,4 +32,4 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('User', userSchema)
 
-module.exports = {User}
+module.exports = { User }
